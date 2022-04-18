@@ -1,0 +1,5 @@
+@import "../../styles/mixins";
+
+.StackShieldWrapper {
+  @include box();
+}
