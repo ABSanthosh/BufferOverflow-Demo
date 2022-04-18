@@ -202,7 +202,6 @@ int main(int argc, char* argv[]){
                       return (
                         <tr
                           key={index}
-                          // ref={index === 0 ? stackStartRef1 : null}
                         >
                           <td className={className}>{address}</td>
                           <td className={className}>{value}</td>
