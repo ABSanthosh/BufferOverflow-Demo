@@ -5,7 +5,7 @@ import Overflow from "../Overflow/Overflow";
 import StackShield from "../StackShield/StackShield";
 
 export default function Home() {
-  const [tabNo, setTabNo] = useState(0);
+  const [tabNo, setTabNo] = useState(1);
 
   return (
     <div className="HomeWrapper">
