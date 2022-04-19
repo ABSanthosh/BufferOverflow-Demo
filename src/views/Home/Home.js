@@ -2,10 +2,16 @@ import StackGuard from "../StackGuard/StackGuard";
 import "./Home.scss";
 import Overflow from "../Overflow/Overflow";
 import StackShield from "../StackShield/StackShield";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 
 export default function Home() {
-  const { tab } = useParams();
+  let { tab } = useParams();
+  const history = useHistory();
+  
+  if (isNaN(tab)) {
+    tab = 0;
+    history.push("/0");
+  }
 
   return (
     <div className="HomeWrapper">
