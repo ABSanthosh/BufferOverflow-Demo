@@ -28,6 +28,8 @@
     &--Item {
       font-family: "Mandali", sans-serif;
       padding: 0 10px;
+      text-decoration: none;
+      color: black;
       font-size: 1.2rem;
       border-bottom: 1px solid #d5d5d5;
       @include make-flex($align: flex-start);
