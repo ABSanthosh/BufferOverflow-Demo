@@ -58,7 +58,7 @@ function StackShield(props) {
   return (
     <div className="StackShieldWrapper">
       <div className="StackShieldWrapper__title">
-        <h3>Basic Buffer Overflow</h3>
+        <h3>Overflow Prevention with Stack Shield</h3>
         <hr />
       </div>
       <div className="StackShieldWrapper__content">

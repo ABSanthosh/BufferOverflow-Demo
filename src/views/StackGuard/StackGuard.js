@@ -5,7 +5,7 @@ import "./StackGuard.scss";
 function StackGuard() {
   const errorCodes = {
     1: "For demonstration purposes, set buffer in the range of 1-17",
-    2: "Possible overflow! Stack is full!",
+    2: "Canary value overwritten, Program terminated",
   };
   const [bufferSize, setBufferSize] = useState(0);
   const [errorList, setErrorList] = useState([]);
@@ -42,7 +42,7 @@ function StackGuard() {
     for (var i = 0; i < inputArr.length; i++) {
       if (input[i] !== " ") {
         console.log(tempStack[bufferEndIndex + i]);
-        if (tempStack[bufferEndIndex + i] !== "Canary" && !isOverflow) {
+        if (tempStack.includes("Canary") && !isOverflow) {
           if (isNaN(input[i])) {
             tempStack[bufferEndIndex + i] = inputArr[i];
           } else if (input[i] === 0) {
