@@ -7,7 +7,7 @@ import { Link, useHistory, useParams } from "react-router-dom";
 export default function Home() {
   let { tab } = useParams();
   const history = useHistory();
-  
+  // test
   if (isNaN(tab)) {
     tab = 0;
     history.push("/0");
